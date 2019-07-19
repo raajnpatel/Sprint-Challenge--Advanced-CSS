@@ -3,7 +3,29 @@
 .home {
 
   .intro {
-
+      .spaceEarth {
+        background-image: url("../img/main-header.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 98%;
+        margin: 3% auto;
+        height: 200px;
+        border-radius: 10px;
+        .trueCenter();
+        @media screen and (max-width: 700px) {
+          height: 170px;
+          transition: 1s;
+        }
+        @media screen and (max-width: 600px) {
+          height: 140px;
+          transition: 1s;
+        }
+        @media @phone {
+          max-width: initial;
+          height: 120px;
+          transition: 1s;
+        }
+      }
     h2 {
       padding: 15px;
     }
@@ -18,6 +40,15 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+      @media @phone {
+        .sky, .launch {
+          display: none;
+        }
+        .blast {
+          width: 85%;
+          margin: 4% auto;
+        }
+      }
 
     img {
       width: 28%;
@@ -58,6 +89,7 @@
       }
 
       .btn {
+        .prime-button();
       }
     }
 
