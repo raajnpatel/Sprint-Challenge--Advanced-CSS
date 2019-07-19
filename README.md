@@ -34,13 +34,24 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+ Adaptive is probably the best way to go, because it utilizes your screen size to determine which page loads (desktop, tablet, phone, etc.).  Responsive, however, is relative to your screen size at any interval so everything is constantly readjusting to fit the format.  Responsive is prone to breaking due to the increasing amount of sizes and dimensions of screens.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+ Dekstop first simply means that the developer develops a webpage with the desktop version in mind as opposed to the mobile.  Formatting the desktop, as far as I can see so far, seems to be the best way to go because you're able to utilize and format a larger area so seeing all the formats is easier (centering, spacing, etc.).  You'd take all of those relative sizes and media query the screen sizes to format for best appearance at the given size.
+ Mobile first is the opposite, of course.  You'd create the design based on mobile specs and scale up from there.  Again, I personally wouldn't want to go this method because scaling up images can be a pain as far as stretching and pixelation while, usualy, shrinking images goes a little smoother.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+ Changing the font-size to 62.5% in the "html" tag while using "rem" units means that you are setting the base font size of the entire html to 10pt font.  What this does is allow you to use the "rem" unit as a multiplier, this system is similar to the metric system as opposed to the incredilby terrible imperial system.  The "rem" unit will mutiply by whatever number precedes your rem tag by your new font size, which is 10.  For example: "font-size: 2rem;" = 20pt font, "font-size: 1.4rem;" = 14pt font. 
+
 4. How would you describe preprocessing to someone new to CSS?
 
+ CSS currently is fairly limited.  When introducing Javascript and more advanced code, you can create some well functioning animations and styles.  However, there is a way to expand the library of CSS, introducing an array of new modules and available units.  Using a preprocessor does exactly that, essentially unlocking new phrases and styles to your CSS code.  This allows you to, not only clean up your code so future developers don't spend hours scouring through code to change a simple button, but also asign variables to code allowing you utilize one class to accomplish multiple goals.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+ My favorite concept in preprocessing is definitely the Mixin values.  Mixins allow you to set up a class with nested code that can be executed within any other class.  For example, you can create a ".trueCenter {}" mixin, and asign flex  as well as centering the items and content.  Then, take that ".trueCenter {}" and apply to within any class by using ".trueCenter();".  You'll notice in your inspect tool that all of the arguements you've placed within ".trueCenter {}" mixin, are now applied directly to your given class.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
