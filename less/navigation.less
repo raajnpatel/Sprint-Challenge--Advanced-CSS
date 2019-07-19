@@ -5,6 +5,10 @@
   .trueCenter();
   flex-direction: column;
     nav {
+      @media screen and (max-width: 680px) {
+        width: 80%;
+        transition: 500ms;
+      }
       @media @phone {
         display: flex;
         flex-direction: column;
