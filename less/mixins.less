@@ -1,1 +1,36 @@
 // Mixins Here
+.trueCenter {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  position: center;
+}
+
+.font-paragraph {
+  color: @vino_red;
+  font-size: 1.6rem;
+  line-height: 1.4;
+    &:hover {
+      transform: scale(1.01);
+    }
+}
+
+.prime-button {
+  background: @earth_blue;
+  .trueCenter();
+  font-size: 0;
+  color: ;
+  width: ;
+  height: ;
+  border: 2px dashed yellow;
+  border-radius: 15px;
+    &:hover {
+      background: ;
+      color: @earth_blue;
+      cursor: grab;
+      border: 2px dashed @earth_blue;
+      transition: 500ms;
+    }
+}
