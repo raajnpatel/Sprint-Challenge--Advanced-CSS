@@ -509,3 +509,27 @@ h2 {
   margin-top: 10%;
   font-size: 2.5rem;
 }
+.thanksbutton {
+  background: #095787;
+  font-size: 3rem;
+  color: yellow;
+  width: 150px;
+  height: 50px;
+  border: 2px dashed yellow;
+  border-radius: 15px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  position: center;
+  margin: 10% auto;
+}
+.thanksbutton:hover {
+  background: yellow;
+  color: #095787;
+  cursor: grab;
+  border: 2px dashed #095787;
+  transition: 500ms;
+}
