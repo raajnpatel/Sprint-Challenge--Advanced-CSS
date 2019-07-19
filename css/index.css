@@ -1,3 +1,41 @@
+.trueCenter {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  position: center;
+}
+.font-paragraph {
+  color: #800000;
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.font-paragraph:hover {
+  transform: scale(1.01);
+}
+.prime-button {
+  background: #095787;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  position: center;
+  font-size: 3rem;
+  color: yellow;
+  width: 150px;
+  height: 50px;
+  border: 2px dashed yellow;
+  border-radius: 15px;
+}
+.prime-button:hover {
+  background: yellow;
+  color: #095787;
+  cursor: grab;
+  border: 2px dashed #095787;
+  transition: 500ms;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -130,12 +168,19 @@ table {
   box-sizing: border-box;
 }
 html {
+  background-color: #fffaf0;
   font-size: 62.5%;
 }
 html,
 body {
   font-family: 'Ubuntu', sans-serif;
   color: #5E6164;
+}
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  background: #f0f5ff;
+  border: 20px;
 }
 h1,
 h2,
@@ -145,6 +190,10 @@ h5 {
   font-family: 'Russo One', sans-serif;
   color: #23293B;
 }
+h1 {
+  text-align: center;
+  font-size: 4rem;
+}
 h2 {
   font-size: 3.2rem;
 }
@@ -152,13 +201,66 @@ h3 {
   font-size: 2.8rem;
 }
 p {
+  color: #800000;
   font-size: 1.6rem;
   line-height: 1.4;
+}
+p:hover {
+  transform: scale(1.01);
+}
+a {
+  text-decoration: none;
 }
 .container {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+}
+.ihome {
+  background-image: linear-gradient(coral, #f0f5ff);
+  border-radius: 20px 20px 10px 10px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  position: center;
+  flex-direction: column;
+}
+.ihome nav {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  position: center;
+  justify-content: space-between;
+  margin: 2% 0;
+  color: darkslategrey;
+  text-decoration: none;
+  font-size: 2rem;
+}
+@media screen and (max-width: 680px) {
+  .ihome nav {
+    width: 80%;
+    transition: 500ms;
+  }
+}
+@media (max-width: 500px) {
+  .ihome nav {
+    display: flex;
+    flex-direction: column;
+    margin: 4% 0;
+  }
+}
+.ihome nav a:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 500px) {
+  .ihome nav a {
+    margin: 1% 0;
+  }
 }
 footer {
   color: #22283B;
@@ -170,6 +272,40 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.home .intro .spaceEarth {
+  background-image: url("../img/main-header.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 98%;
+  margin: 3% auto;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  position: center;
+}
+@media screen and (max-width: 700px) {
+  .home .intro .spaceEarth {
+    height: 170px;
+    transition: 1s;
+  }
+}
+@media screen and (max-width: 600px) {
+  .home .intro .spaceEarth {
+    height: 140px;
+    transition: 1s;
+  }
+}
+@media (max-width: 500px) {
+  .home .intro .spaceEarth {
+    max-width: initial;
+    height: 120px;
+    transition: 1s;
+  }
+}
 .home .intro h2 {
   padding: 15px;
 }
@@ -180,6 +316,16 @@ footer {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .home .space-images .sky,
+  .home .space-images .launch {
+    display: none;
+  }
+  .home .space-images .blast {
+    width: 85%;
+    margin: 4% auto;
+  }
 }
 .home .space-images img {
   width: 28%;
@@ -203,8 +349,22 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .home .walk {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 20px;
+    padding: 40px 40px;
+    transition: 1s;
+  }
+}
 .home .walk .walk-text {
   width: 50%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 100%;
+  }
 }
 .home .walk .walk-text h3 {
   margin-bottom: 10px;
@@ -212,12 +372,164 @@ footer {
 .home .walk .walk-text p {
   margin-bottom: 26px;
 }
+.home .walk .walk-text .btn {
+  background: #095787;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  position: center;
+  font-size: 3rem;
+  color: yellow;
+  width: 150px;
+  height: 50px;
+  border: 2px dashed yellow;
+  border-radius: 15px;
+}
+.home .walk .walk-text .btn:hover {
+  background: yellow;
+  color: #095787;
+  cursor: grab;
+  border: 2px dashed #095787;
+  transition: 500ms;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    position: center;
+    transition: 1s;
+  }
+}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
+}
+@media screen and (max-width: 700px) {
+  .home .walk .walk-img {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    position: center;
+  }
+}
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 4%;
+  }
 }
 .home .walk .walk-img img {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+* {
+  box-sizing: border-box;
+}
+/* Full-width input fields */
+input[type=text],
+input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus,
+input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+button:hover {
+  opacity: 1;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+  }
+}
+h1,
+h2 {
+  margin-top: 5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.thanks a {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  font-size: 2.5rem;
+}
+.thanksbutton {
+  background: #095787;
+  font-size: 3rem;
+  color: yellow;
+  width: 150px;
+  height: 50px;
+  border: 2px dashed yellow;
+  border-radius: 15px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  position: center;
+  margin: 10% auto;
+}
+.thanksbutton:hover {
+  background: yellow;
+  color: #095787;
+  cursor: grab;
+  border: 2px dashed #095787;
+  transition: 500ms;
 }

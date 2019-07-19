@@ -1,1 +1,33 @@
 // Navigation code here
+.ihome {
+  background-image: linear-gradient(coral, @babe_blue);
+  border-radius: 20px 20px 10px 10px;
+  .trueCenter();
+  flex-direction: column;
+    nav {
+      @media screen and (max-width: 680px) {
+        width: 80%;
+        transition: 500ms;
+      }
+      @media @phone {
+        display: flex;
+        flex-direction: column;
+        margin: 4% 0;
+      }
+      width: 60%;
+      .trueCenter();
+      justify-content: space-between;
+      margin: 2% 0;
+        a {
+          &:hover {
+            transform: scale(1.1);
+          }
+          @media @phone {
+            margin: 1% 0;
+          }
+        }
+      color: darkslategrey;
+      text-decoration: none;
+      font-size: 2rem;
+    }
+}
